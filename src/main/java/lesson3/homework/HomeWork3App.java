@@ -3,8 +3,8 @@ package lesson3.homework;
 public class HomeWork3App {
     public static void main(String[] args) {
 
-        int x = 3;
-        int n = 5;
+        long x = 3;
+        long n = 5;
         System.out.println(powRecursive(x, n));
         System.out.println(powOptimized(x, n));
 
@@ -22,12 +22,15 @@ public class HomeWork3App {
 //    Первое решение выполнить рекурсивно за временную сложность O(n) - лиейная
 //    Второе решение это улучшить решение 1 до временной сложности O(log n) логарифмическая
 
-    public static int powRecursive(int x, int n) {
+    public static long powRecursive(long x, long n) {
+        if (n == 0) return 1;
         if (n == 1) return x;
+
         return x * powRecursive(x, n - 1);
     }
 
-    public static int powOptimized(int x, int n) {
+    public static long powOptimized(long x, long n) {
+       if (n == 0) return 1;
         if (n == 1)
             return x;
 
@@ -38,7 +41,7 @@ public class HomeWork3App {
     }
 
 
-    //    Имея два отсортированных массива размера m и n соответственно, вам нужно найти элемент,
+//    Имея два отсортированных массива размера m и n соответственно, вам нужно найти элемент,
 //    который будет находиться на k-й позиции в конечном отсортированном массиве.
 //    Массив 1 - 100 112 256 349 770
 //    Массив 2 - 72 86 113 119 265 445 892
@@ -60,7 +63,8 @@ public class HomeWork3App {
         return next;
     }
 
-    //    3.Имея отсортированный массив arr[] и число x, напишите функцию, которая подсчитывает вхождения x в arr[].
+
+//    3.Имея отсортированный массив arr[] и число x, напишите функцию, которая подсчитывает вхождения x в arr[].
 //    Ожидаемая временная сложность O(log n)
 //    arr[] = {1, 1, 2, 2, 2, 2, 3,}
 //    x = 2
