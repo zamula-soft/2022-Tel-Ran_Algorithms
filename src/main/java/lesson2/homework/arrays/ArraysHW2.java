@@ -1,4 +1,4 @@
-package lesson2homework.arrays;
+package lesson2.homework.arrays;
 
 public class ArraysHW2 {
     public static void main(String[] args) {
