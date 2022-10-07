@@ -5,6 +5,7 @@ Contains Java classes and packages with different algorithms:
 - Two pointers , Binary Search, Recursive (lesson 2)
 - Uses binary search (lesson 3)
 - Merge Arrays (task 2), Merge Sort (N log(N)), Divide and Conquer  (lesson 4)
-
+- QuickSort , Dynamic Types (lesson 5)
+- 
 ## Additional info
 

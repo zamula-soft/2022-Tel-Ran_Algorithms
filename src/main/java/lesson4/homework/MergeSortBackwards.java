@@ -34,8 +34,39 @@ public class MergeSortBackwards {
         mergeSortBackwards(left, mid);
         mergeSortBackwards(right, length - mid);
         mergeArraysBackwards(left, right, array);
+        mergeArraysLesson5(left, right, array);
 
 
+    }
+
+    private static void mergeArraysLesson5(int[] one, int[] two, int[] array){
+        int indexOne = 0;
+        int indexTwo = 0;
+        int i = 0;
+
+        while (indexOne < one.length && indexTwo< two.length){
+
+            int elementOne = one[indexOne];
+            int elementTwo = two[indexTwo];
+
+            if (elementOne>elementTwo){
+                array[i++] = elementOne;
+                indexOne++;
+            }
+            else {
+                array[i++] = elementTwo;
+                indexTwo++;
+            }
+
+        }
+        while (indexOne < one.length){
+            array[i++] = one[indexOne];
+            indexOne++;
+        }
+        while (indexTwo < two.length){
+            array[i++] = two[indexTwo];
+            indexTwo++;
+        }
     }
 
     //Merge arrays
